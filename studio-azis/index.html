@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!--
+  SITE: Studio Azis - Personalização interna (design de interiores)
+  ARQUIVOS DO PROJETO:
+    index.html  -> estrutura e conteúdo (este arquivo)
+    style.css   -> aparência (cores, fontes, layout)
+    script.js   -> comportamentos (menu no celular, galeria ampliada, validação do formulário)
+    imagens/    -> logos e fotos dos projetos
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Faz o site se ajustar à largura do celular (responsivo) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studio Azis | Personalização interna</title>
+  <meta name="description" content="Studio Azis: projetos de personalização interna (design de interiores) residencial e comercial, com foco em projetos executáveis.">
+
+  <!-- Fontes do Google. Se estiverem sem internet, o navegador usa as fontes reserva definidas no CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ CABEÇALHO E MENU ============ -->
+  <header class="cabecalho">
+    <div class="container cabecalho__interno">
+      <a href="#inicio" class="cabecalho__logo" aria-label="Studio Azis, voltar ao início">
+        <img src="imagens/logo-colorida.png" alt="Logo Studio Azis">
+      </a>
+
+      <!-- Botão que só aparece no celular (o JS abre e fecha o menu) -->
+      <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu" id="menu" aria-label="Menu principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#contato" class="botao botao--pequeno">Pedir orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ INÍCIO (HERO) ============ -->
+    <section class="hero" id="inicio">
+      <div class="container hero__interno">
+        <div class="hero__texto">
+          <h1>Transformamos seu projeto em um sonho executável.</h1>
+          <p>
+            O Studio Azis faz a personalização interna (design de interiores) da sua casa,
+            apartamento ou espaço comercial, com projetos que cabem na obra e no seu orçamento.
+          </p>
+          <div class="hero__botoes">
+            <a href="#contato" class="botao">Pedir orçamento</a>
+            <a href="#projetos" class="botao botao--contorno">Ver projetos</a>
+          </div>
+        </div>
+
+        <!-- A foto fica dentro de uma forma orgânica, inspirada na logo -->
+        <div class="hero__imagem">
+          <img src="imagens/sala-jantar.jpg" alt="Sala de jantar integrada com mesa redonda escura e cadeiras laranja">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="secao" id="sobre">
+      <div class="container sobre">
+        <h2>Sobre o studio</h2>
+        <div class="sobre__texto">
+          <p>
+            Somos apaixonados por realizar sonhos e conhecer histórias novas. Atuamos há 9 anos
+            neste mercado e, com a experiência de cada projeto, aprimoramos nosso trabalho para
+            que ele seja o mais humanizado possível.
+          </p>
+          <p>
+            Esperamos fazer parte da realização do seu projeto junto com você.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    <section class="secao secao--areia" id="servicos">
+      <div class="container">
+        <h2>Nossos serviços</h2>
+        <p class="secao__intro">Do primeiro desenho até a obra pronta.</p>
+
+        <div class="grade grade--4">
+          <article class="cartao">
+            <h3>Móveis planejados</h3>
+            <p>Marcenaria desenhada sob medida para o seu espaço e para o seu dia a dia.</p>
+          </article>
+          <article class="cartao">
+            <h3>Consultoria de interiores</h3>
+            <p>Orientação para escolher cores, móveis, iluminação e acabamentos com segurança.</p>
+          </article>
+          <article class="cartao">
+            <h3>Projeto residencial e comercial</h3>
+            <p>Projeto completo para casas, apartamentos, consultórios, lojas e escritórios.</p>
+          </article>
+          <article class="cartao">
+            <h3>Execução e acompanhamento de obra</h3>
+            <p>Acompanhamos a obra para o resultado final ficar fiel ao projeto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIFERENCIAIS ============ -->
+    <section class="secao" id="diferenciais">
+      <div class="container diferenciais">
+        <div class="diferenciais__titulo">
+          <h2>Vantagens de fazer seu projeto conosco</h2>
+        </div>
+
+        <ul class="lista-check">
+          <li>
+            <strong>Projetos executáveis</strong>
+            Tudo o que desenhamos pode ser construído.
+          </li>
+          <li>
+            <strong>Economia no valor da obra</strong>
+            Ajudamos você a economizar no montante da obra.
+          </li>
+          <li>
+            <strong>Parceiros selecionados</strong>
+            Indicamos profissionais e lojas que agregam ainda mais valor ao projeto.
+          </li>
+          <li>
+            <strong>Psicobriefing personalizado</strong>
+            Um roteiro de conversa para entender suas dores e necessidades antes de projetar.
+          </li>
+          <li>
+            <strong>Atenção a cada cliente</strong>
+            Amamos projetar e entender cada pessoa que atendemos.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROJETOS (GALERIA) ============ -->
+    <section class="secao secao--areia" id="projetos">
+      <div class="container">
+        <h2>Projetos</h2>
+        <p class="secao__intro">Clique em uma foto para ampliar.</p>
+
+        <div class="galeria">
+          <!-- Cada foto fica dentro de um <button> para também funcionar com o teclado.
+               O atributo data-legenda guarda o texto que o JS mostra na foto ampliada. -->
+          <button class="galeria__item galeria__item--grande" data-legenda="Área externa com deck de madeira e piscina">
+            <img src="imagens/area-externa.jpg" alt="Casa de dois andares com escada metálica, deck de madeira e piscina" loading="lazy">
+            <span>Área externa</span>
+          </button>
+          <button class="galeria__item" data-legenda="Sala de jantar integrada à sala de estar">
+            <img src="imagens/sala-jantar.jpg" alt="Sala de jantar com mesa redonda escura e cadeiras laranja" loading="lazy">
+            <span>Sala de jantar</span>
+          </button>
+          <button class="galeria__item" data-legenda="Cozinha com bancada em madeira ripada e iluminação em LED">
+            <img src="imagens/cozinha.jpg" alt="Cozinha com bancada ripada, prateleiras iluminadas e parede verde" loading="lazy">
+            <span>Cozinha</span>
+          </button>
+          <button class="galeria__item" data-legenda="Banheiro com revestimento em tom neutro e luz embutida no espelho">
+            <img src="imagens/banheiro.jpg" alt="Banheiro com cuba esculpida, espelho com iluminação e box de vidro" loading="lazy">
+            <span>Banheiro</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ATENDIMENTO (DOIS FORMATOS) ============ -->
+    <section class="secao" id="atendimento">
+      <div class="container">
+        <h2>Formatos de atendimento</h2>
+        <p class="secao__intro">Escolha o que cabe melhor no seu momento. Os valores são passados no orçamento.</p>
+
+        <div class="grade grade--2">
+          <article class="formato">
+            <h3>Projeto essencial</h3>
+            <p class="formato__resumo">Para quem quer o projeto técnico e vai conduzir a obra e as compras.</p>
+            <ul>
+              <li>Planta baixa técnica</li>
+              <li>Planta baixa de layout</li>
+              <li>Planta de demolição e construção</li>
+              <li>Planta de luminotécnica</li>
+              <li>Planta de adaptação de pontos elétricos</li>
+              <li>Detalhamento de revestimento, textura de parede e acabamento fino</li>
+              <li>Detalhamento de marcenaria</li>
+              <li>Entrega digital</li>
+              <li>Até 1 visita em obra</li>
+              <li>Até 1 visita em loja</li>
+            </ul>
+            <a href="#contato" class="botao botao--contorno">Pedir orçamento</a>
+          </article>
+
+          <article class="formato formato--destaque">
+            <h3>Projeto completo</h3>
+            <p class="formato__resumo">Tudo do essencial, mais apoio nas compras, na ambientação e nas visitas.</p>
+            <ul>
+              <li>Todos os itens do projeto essencial</li>
+              <li>Lista de compras de mobiliário e iluminação</li>
+              <li>Ajuda na ambientação e no enxoval</li>
+              <li>Entrega digital e impressa</li>
+              <li>Até 3 visitas em obra</li>
+              <li>Até 2 visitas em lojas</li>
+              <li>Planilha de custo</li>
+            </ul>
+            <a href="#contato" class="botao">Pedir orçamento</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="secao secao--verde" id="contato">
+      <div class="container contato">
+        <div class="contato__texto">
+          <h2>Vamos conversar sobre o seu projeto?</h2>
+          <p>
+            Conte um pouco sobre o espaço e o que você sonha para ele.
+            Respondemos para combinar o próximo passo.
+          </p>
+          <ul class="contato__dados">
+            <li>WhatsApp: <a href="https://wa.me/5561984015569?text=Ol%C3%A1%2C%20Studio%20Azis%21%20Gostaria%20de%20realizar%20um%20or%C3%A7amento%20de%20projeto%20de%20personaliza%C3%A7%C3%A3o%20interna.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener">(61) 98401-5569</a></li>
+            <li>E-mail: <a href="mailto:azisprojetos@gmail.com">azisprojetos@gmail.com</a></li>
+            <li>Instagram: <a href="https://instagram.com/studioazis" target="_blank" rel="noopener">@studioazis</a></li>
+          </ul>
+        </div>
+
+        <!-- novalidate: desliga a validação padrão do navegador, pois usamos a nossa no script.js -->
+        <form class="formulario" id="formulario" novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name">
+            <small class="erro" id="erro-nome"></small>
+          </div>
+
+          <div class="campo">
+            <label for="contatoCliente">WhatsApp ou e-mail</label>
+            <input type="text" id="contatoCliente" name="contatoCliente">
+            <small class="erro" id="erro-contato"></small>
+          </div>
+
+          <div class="campo">
+            <label for="tipo">O que você precisa?</label>
+            <select id="tipo" name="tipo">
+              <option value="residencial">Projeto residencial</option>
+              <option value="comercial">Projeto comercial</option>
+              <option value="moveis">Móveis planejados</option>
+              <option value="consultoria">Consultoria de interiores</option>
+              <option value="obra">Execução e acompanhamento de obra</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+            <small class="erro" id="erro-mensagem"></small>
+          </div>
+
+          <button type="submit" class="botao botao--claro">Enviar pelo WhatsApp</button>
+
+          <!-- Mensagem exibida depois do envio, escondida até o JS mostrar -->
+          <p class="sucesso" id="sucesso" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="rodape">
+    <div class="container rodape__interno">
+      <img src="imagens/logo-cinza.png" alt="Logo Studio Azis em cinza" class="rodape__logo">
+      <p>Studio Azis · Personalização interna</p>
+      <p>&copy; <span id="ano">2026</span> Studio Azis. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Caixa que mostra a foto ampliada (elemento <dialog> do HTML) -->
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox__fechar" id="lightboxFechar" aria-label="Fechar foto">&times;</button>
+    <img src="" alt="" id="lightboxImagem">
+    <p id="lightboxLegenda"></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
